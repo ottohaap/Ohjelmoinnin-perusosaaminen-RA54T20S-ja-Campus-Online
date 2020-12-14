@@ -38,12 +38,12 @@ def magazine_serial_check(serial):
 
 
 # listataan nimet annetun otsikon mukaan
-def show_numbered_list(title, data):
+def show_numbered_list(title, people):
 
     print("")
 
     # muutetaan käyttäjän antama teksti listaksi
-    people = data.split(",")
+    people = people.split(",")
     #print(people)
 
     # otetaan nimistä ylimääräiset välilyönnit pois (nimen alusta ja lopusta)
@@ -62,7 +62,7 @@ def show_numbered_list(title, data):
 
     elif title == "first_name":
 
-        print("Aakkosjärjestyksesä etunimen perusteella:")
+        print("Aakkosjärjestys etunimen perusteella:")
 
         # nimet aakkosjärjestykseen
         people = sorted(people)
@@ -72,7 +72,7 @@ def show_numbered_list(title, data):
 
     else:
 
-        print("Aakkosjärjestyksesä sukunimen perusteella:")
+        print("Aakkosjärjestys sukunimen perusteella:")
 
         # muutetaan listan henkilöt niin, että sukunimi tulee ennen etunimeä.
         # tämä on ns. list comprehension -ominaisuus Pythonissa.
@@ -95,21 +95,22 @@ def show_numbered_list(title, data):
 def box_volume(width, height, depth):
     volume = width * height * depth
     volume = round(volume, 2)
-    print(f"Laatikon tilavuus: {volume} m3.\n")
+    return volume
+
 
 
 # pallon tilavuus
 def ball_volume(radius):
     volume = (4 * math.pi * math.pow(radius, 3)) / 3
     volume = round(volume, 2)
-    print(f"Pallon tilavuus: {volume} m3.\n")
+    return volume
 
 
 # lieriön tilavuus
-def cylinder_volume(radius, length):
+def pipe_volume(radius, length):
     volume = math.pi * math.pow(radius, 2) * length
     volume = round(volume, 2)
-    print(f"Lieriön tilavuus: {volume} m3.\n")
+    return volume
 
 
 # korvataan pilkut sisennyksillä tekstinkäsittelyssä

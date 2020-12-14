@@ -1,4 +1,4 @@
-from functions import box_volume, ball_volume, cylinder_volume
+from functions import box_volume, ball_volume, pipe_volume
 
 try:
     running = True
@@ -18,22 +18,26 @@ try:
             height = float(input("Anna laatikon korkeus (m):\n"))
             depth = float(input("Anna laatikon syvyys (m):\n"))
 
-            box_volume(width, height, depth)
+            volume = box_volume(width, height, depth)
+            print(f"Laatikon tilavuus: {volume} m3.\n")
 
         elif shape == 2:
 
             radius = float(input("Anna pallon säde (m):\n"))
 
-            ball_volume(radius)
+            volume = ball_volume(radius)
+            print(f"Pallon tilavuus: {volume} m3.\n")
 
         elif shape == 3:
 
             radius = float(input("Anna lieriön pohjan säde (m):\n"))
             lenght = float(input("Anna lieriön pituus (m): \n"))
 
-            cylinder_volume(radius, lenght)
+            volume = pipe_volume(radius, lenght)
+            print(f"Lieriön tilavuus: {volume} m3.\n")
 
         else:
+
             print("Väärä muoto!")
 
 except ValueError:
