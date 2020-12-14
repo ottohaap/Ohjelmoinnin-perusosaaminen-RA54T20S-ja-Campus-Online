@@ -12,7 +12,7 @@ def count_seconds(hours, minutes, seconds):
     hours = hours * 3600
     minutes = minutes * 60
     sum_seconds = hours + minutes + seconds
-    print(f"Yhteensä {sum_seconds} sekuntia.")
+    return sum_seconds
 
 
 # tarkistaa onko ISSN-numero oikeassa muodossa
