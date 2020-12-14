@@ -1,0 +1,7 @@
+Maanantai
+Tiistai
+Keskiviikko
+Torstai
+Perjantai
+Lauantai
+Sunnuntai

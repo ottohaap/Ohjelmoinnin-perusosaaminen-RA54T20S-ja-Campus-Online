@@ -110,3 +110,9 @@ def cylinder_volume(radius, length):
     volume = math.pi * math.pow(radius, 2) * length
     volume = round(volume, 2)
     print(f"Lieriön tilavuus: {volume} m3.\n")
+
+
+# korvataan pilkut sisennyksillä tekstinkäsittelyssä
+def replace_commas(string):
+    print(string.replace(",", "\t"))
+
