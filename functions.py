@@ -114,6 +114,22 @@ def pipe_volume(radius, length):
 
 
 # korvataan pilkut sisennyksillä tekstinkäsittelyssä
-def replace_commas(string):
-    print(string.replace(",", "\t"))
+# Erillisen funktion käyttäminen on lisätehtävä.
+# Jos haluat tehdä tämän lisätehtävän,
+# muista että funktiossa pitää olla
+# open, read/readline/readlines sekä close-kutsut.
+# Muista myös kutsua omaa funktiotasi.
+def get_artists():
+
+    # avataan tiedosto
+    file_handle = open("artists.txt", "r", encoding='utf-8')
+    # haetaan tiedoston sisältö
+    content = file_handle.read()
+    file_handle.close()
+    # tehdään lista, erotetaan \n
+    lines = content.split("\n")
+
+    for line in lines:
+        artist_text = line.replace(",", "\t")
+        print(artist_text)
 

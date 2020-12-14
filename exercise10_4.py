@@ -1,5 +1,5 @@
 import json
-file_handle = open("countries.json", "r")
+file_handle = open("countries.json", "r", encoding='utf-8')
 content = file_handle.read()
 file_handle.close()
 
